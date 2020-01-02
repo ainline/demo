@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="userService" class="com.alchen.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="userDao" class="com.alchen.dao.impl.UserDaoImpl">
+        <property name="qr" ref="qr"/>
+    </bean>
+
+    <!-- 配置QueryRunner数据源，只能通过构造函数创建,默认是单例的，会导致阻塞，设置多例，每次建立新的连接对象-->
+    <bean id="qr" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <constructor-arg name="ds" ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/demo?serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+</beans>
+
