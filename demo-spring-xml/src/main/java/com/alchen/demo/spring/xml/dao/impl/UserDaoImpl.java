@@ -1,7 +1,7 @@
-package com.alchen.dao.impl;
+package com.alchen.demo.spring.xml.dao.impl;
 
-import com.alchen.dao.IUserDao;
-import com.alchen.entity.User;
+import com.alchen.demo.spring.xml.dao.IUserDao;
+import com.alchen.demo.spring.xml.entity.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;

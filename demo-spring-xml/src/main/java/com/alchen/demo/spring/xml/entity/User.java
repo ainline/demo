@@ -1,4 +1,4 @@
-package com.alchen.entity;
+package com.alchen.demo.spring.xml.entity;
 
 public class User {
 

@@ -1,7 +1,6 @@
-package com.alchen.service;
+package com.alchen.demo.spring.xml.service;
 
-import com.alchen.controller.UserController;
-import com.alchen.entity.User;
+import com.alchen.demo.spring.xml.entity.User;
 
 import java.util.List;
 

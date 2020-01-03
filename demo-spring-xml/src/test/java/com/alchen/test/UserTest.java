@@ -1,8 +1,8 @@
 package com.alchen.test;
 
-import com.alchen.entity.User;
-import com.alchen.service.IUserService;
-import com.alchen.service.impl.UserServiceImpl;
+
+import com.alchen.demo.spring.xml.entity.User;
+import com.alchen.demo.spring.xml.service.IUserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
