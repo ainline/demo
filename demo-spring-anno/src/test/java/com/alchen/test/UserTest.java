@@ -4,18 +4,22 @@ import com.alchen.demo.spring.aop.config.SpringConfiguration;
 import com.alchen.demo.spring.aop.entity.User;
 import com.alchen.demo.spring.aop.service.IUserService;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfiguration.class)
 public class UserTest {
+
+    @Autowired
+    private IUserService userService;
+
     @Test
     public void testFindAll() {
-        ApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-//        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IUserService userService = ac.getBean("userService", IUserService.class);
         List<User> userList = userService.findAllUser();
         for (User user : userList) {
             System.out.println(user);
@@ -24,16 +28,12 @@ public class UserTest {
 
     @Test
     public void testFindOne() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IUserService userService = ac.getBean("userService", IUserService.class);
         User user = userService.findOneUser(1);
         System.out.println(user);
     }
 
     @Test
     public void testSave() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IUserService userService = ac.getBean("userService", IUserService.class);
         User user = new User();
         user.setAge(11);
         user.setCard("00003");
@@ -43,15 +43,11 @@ public class UserTest {
 
     @Test
     public void testDelete() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IUserService userService = ac.getBean("userService", IUserService.class);
         userService.deleteUserById(2);
     }
 
     @Test
     public void testUpdate() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        IUserService userService = ac.getBean("userService", IUserService.class);
         User user = new User();
         user.setId(4);
         user.setAge(11);

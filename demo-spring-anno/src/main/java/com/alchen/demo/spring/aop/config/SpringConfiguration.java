@@ -11,6 +11,4 @@ import org.springframework.context.annotation.Import;
 @ComponentScan("com.alchen.demo.spring.aop")
 @Import(JdbcConfig.class)
 public class SpringConfiguration {
-
-
 }

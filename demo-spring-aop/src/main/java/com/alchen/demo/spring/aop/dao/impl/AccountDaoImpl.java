@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository("accountDao")
 public class AccountDaoImpl implements IAccountDao {
 
     private QueryRunner qr;
