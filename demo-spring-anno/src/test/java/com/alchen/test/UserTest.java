@@ -1,8 +1,8 @@
 package com.alchen.test;
 
-import com.alchen.demo.spring.anno.config.SpringConfiguration;
-import com.alchen.demo.spring.anno.entity.User;
-import com.alchen.demo.spring.anno.service.IUserService;
+import com.alchen.demo.spring.aop.config.SpringConfiguration;
+import com.alchen.demo.spring.aop.entity.User;
+import com.alchen.demo.spring.aop.service.IUserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

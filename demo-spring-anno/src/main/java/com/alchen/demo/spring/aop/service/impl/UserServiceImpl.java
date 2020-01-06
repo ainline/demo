@@ -1,9 +1,9 @@
-package com.alchen.demo.spring.anno.service.impl;
+package com.alchen.demo.spring.aop.service.impl;
 
 
-import com.alchen.demo.spring.anno.dao.IUserDao;
-import com.alchen.demo.spring.anno.entity.User;
-import com.alchen.demo.spring.anno.service.IUserService;
+import com.alchen.demo.spring.aop.dao.IUserDao;
+import com.alchen.demo.spring.aop.entity.User;
+import com.alchen.demo.spring.aop.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

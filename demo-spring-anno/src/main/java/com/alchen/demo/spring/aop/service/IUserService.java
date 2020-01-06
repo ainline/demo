@@ -1,7 +1,7 @@
-package com.alchen.demo.spring.anno.service;
+package com.alchen.demo.spring.aop.service;
 
 
-import com.alchen.demo.spring.anno.entity.User;
+import com.alchen.demo.spring.aop.entity.User;
 
 import java.util.List;
 

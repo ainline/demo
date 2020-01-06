@@ -1,6 +1,6 @@
-package com.alchen.demo.spring.anno.dao;
+package com.alchen.demo.spring.aop.dao;
 
-import com.alchen.demo.spring.anno.entity.User;
+import com.alchen.demo.spring.aop.entity.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.alchen.demo.spring.anno.config;
+package com.alchen.demo.spring.aop.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.commons.dbutils.QueryRunner;
