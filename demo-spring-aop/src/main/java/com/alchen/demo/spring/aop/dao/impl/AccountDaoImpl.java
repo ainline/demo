@@ -6,10 +6,12 @@ import com.alchen.demo.spring.aop.utils.ConnectionUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Component
 public class AccountDaoImpl implements IAccountDao {
 
     private QueryRunner qr;

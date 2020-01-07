@@ -10,6 +10,7 @@ import java.sql.Connection;
 /**
  * 连接工具类，从数据源获取连接，绑定线程
  */
+@Component
 public class ConnectionUtil {
 
     private ThreadLocal<Connection> tl = new ThreadLocal<>();

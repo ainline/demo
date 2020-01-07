@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+@Service("accountService")
 public class AccountServiceImpl implements IAccountService {
 
     IAccountDao accountDao = null;
@@ -28,7 +29,7 @@ public class AccountServiceImpl implements IAccountService {
             sourceAccount.setMoney(sourceAccount.getMoney() - money);
             targetAccount.setMoney(targetAccount.getMoney() + money);
             accountDao.updateMoneyByName(sourceAccount);
-//            int i = 1 / 0;
+            int i = 1 / 0;
             accountDao.updateMoneyByName(targetAccount);
 
 
