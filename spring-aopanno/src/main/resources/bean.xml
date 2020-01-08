@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       ">
+
+    <!--配置创建容器时要扫描的包,此处也可以创建configuration配置类，通过java代码配置扫描路径-->
+    <context:component-scan base-package="com.alchen.demo.spring.aopanno"></context:component-scan>
+
+    <!--开启Spring对AOP注解的支持-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+</beans>

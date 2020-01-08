@@ -1,0 +1,33 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--        https://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--        http://www.springframework.org/schema/context-->
+<!--        https://www.springframework.org/schema/context/spring-context.xsd">-->
+
+<!--    <context:component-scan base-package="com.alchen.demo.spring.aop"></context:component-scan>-->
+
+<!--&lt;!&ndash;    <bean id="userService" class="UserServiceImpl">&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="userDao" ref="userDao"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <bean id="userDao" class="UserDaoImpl">&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="qr" ref="qr"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+
+<!--    &lt;!&ndash; 配置QueryRunner数据源，只能通过构造函数创建,默认是单例的，会导致阻塞，设置多例，每次建立新的连接对象&ndash;&gt;-->
+<!--    <bean id="qr" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">-->
+<!--        <constructor-arg name="ds" ref="dataSource"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/demo?serverTimezone=UTC"/>-->
+<!--        <property name="username" value="root"/>-->
+<!--        <property name="password" value="root"/>-->
+<!--    </bean>-->
+
+<!--</beans>-->
+

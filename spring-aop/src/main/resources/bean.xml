@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    <bean id="proxyAccountService" factory-bean="beanFactory" factory-method="getAccountService"></bean>-->
+
+<!--    <bean id="beanFactory" class="BeanFactory">-->
+<!--        <property name="accountService" ref="accountService"></property>-->
+<!--        <property name="txManager" ref="txManager"></property>-->
+<!--    </bean>-->
+
+    <bean id="txManager" class="com.alchen.spring.aop.utils.TransactionManager">
+        <property name="connectionUtil" ref="connectionUtil"></property>
+    </bean>
+
+    <bean id="connectionUtil" class="com.alchen.spring.aop.utils.ConnectionUtil">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="accountService" class="com.alchen.spring.aop.service.impl.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"></property>
+    </bean>
+
+    <bean id="accountDao" class="com.alchen.spring.aop.dao.impl.AccountDaoImpl">
+        <property name="qr" ref="qr"></property>
+        <property name="connectionUtil" ref="connectionUtil"></property>
+    </bean>
+
+    <!-- 配置QueryRunner数据源，只能通过构造函数创建,默认是单例的，会导致阻塞，设置多例，每次建立新的连接对象-->
+    <bean id="qr" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <constructor-arg name="ds" ref="dataSource"/>
+    </bean>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/demo?serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+
+    <!--开启AOP注解支持-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <!--配置AOP-->
+<!--    <aop:config>-->
+<!--        &lt;!&ndash; 定义一个切入点表达式&ndash;&gt;-->
+<!--        <aop:pointcut id="transactionPT" expression="execution(* com.alchen.demo.spring.aop.service..*(..))"/>-->
+<!--        &lt;!&ndash;配置一个切面&ndash;&gt;-->
+<!--        <aop:aspect id="transaction" ref="txManager">-->
+<!--            &lt;!&ndash;配置通知类型&ndash;&gt;-->
+<!--            <aop:around method="aroundTransaction" pointcut-ref="transactionPT"></aop:around>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+</beans>
+
