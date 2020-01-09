@@ -1,4 +1,4 @@
-package com.alchen.demo.spring.aopanno.utils;
+package com.alchen.spring.aopanno.utils;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect //配置当前类为一个切面类
 public class Logger {
 
-    @Pointcut("execution(* com.alchen.demo.spring.aopanno.service..*.*(..))")
+    @Pointcut("execution(* com.alchen.spring.aopanno.service..*.*(..))")
     private void pt() {
     }
 

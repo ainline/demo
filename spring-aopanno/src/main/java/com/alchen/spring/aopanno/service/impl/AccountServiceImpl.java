@@ -1,6 +1,6 @@
-package com.alchen.demo.spring.aopanno.service.impl;
+package com.alchen.spring.aopanno.service.impl;
 
-import com.alchen.demo.spring.aopanno.service.IAccountService;
+import com.alchen.spring.aopanno.service.IAccountService;
 import org.springframework.stereotype.Service;
 
 @Service("accountService")

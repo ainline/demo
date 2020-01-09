@@ -1,7 +1,7 @@
 package com.alchen;
 
-import com.alchen.demo.spring.aopanno.config.SpringConfiguration;
-import com.alchen.demo.spring.aopanno.service.IAccountService;
+import com.alchen.spring.aopanno.config.SpringConfiguration;
+import com.alchen.spring.aopanno.service.IAccountService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

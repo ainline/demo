@@ -1,4 +1,4 @@
-package com.alchen.demo.spring.aopanno.config;
+package com.alchen.spring.aopanno.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

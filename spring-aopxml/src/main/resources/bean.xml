@@ -44,7 +44,7 @@
         <!-- 配置切面-->
         <aop:aspect id="loggerAdvice" ref="logger">
             <!--配置切入点表达式,配置在切面内，只在当前切面有效，配置在切面外，全部切面都可以引用。！如果放在切面外，必须放在配置切面之前-->
-            <aop:pointcut id="log" expression="execution(* com.alchen.demo.spring.aopxml.service.*.*(..))"/>
+            <aop:pointcut id="log" expression="execution(* com.alchen.spring.aopxml.service.*.*(..))"/>
             <!-- 配置通知的类型 -->
 
             <!-- 前置通知：在切入点执行之前执行-->

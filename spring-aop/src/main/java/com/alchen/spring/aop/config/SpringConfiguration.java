@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
  * 主配置类
  */
 //@Configuration
-@ComponentScan("com.alchen.demo.spring.aop")
+@ComponentScan("com.alchen.spring.aop")
 @EnableAspectJAutoProxy
 @Import(JdbcConfig.class)
 public class SpringConfiguration {

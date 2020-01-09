@@ -1,4 +1,4 @@
-package com.alchen.demo.spring.aopanno.service;
+package com.alchen.spring.aopanno.service;
 
 /**
  * 模拟账户业务层接口
