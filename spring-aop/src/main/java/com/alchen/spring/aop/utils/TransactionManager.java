@@ -22,7 +22,7 @@ public class TransactionManager {
     }
 
     //设置切入点表达式方法
-    @Pointcut("execution(* com.alchen.demo.spring.aop.service.*.*(..))")
+    @Pointcut("execution(* com.alchen.spring.aop.service.*.*(..))")
     public void pt(){}
 
     /**
